@@ -50,6 +50,6 @@ class ClientFixtures extends Fixture
         ->setTelephone($faker->phoneNumber());
         $manager->persist($client2);
 
-        // $manager->flush();
+        $manager->flush();
     }
 }
