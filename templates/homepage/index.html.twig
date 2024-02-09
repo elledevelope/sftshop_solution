@@ -2,6 +2,13 @@
 
 {% block body %}
 <section>
+	{# flash message #}
+	{% for message in app.flashes('notice') %}
+		<div class="flash-notice">
+			{{ message }}
+		</div>
+	{% endfor %}
+    
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem inventore voluptas dignissimos deleniti repudiandae. Aspernatur iure minus illum pariatur earum quos reprehenderit itaque eaque nobis provident distinctio, quis accusamus.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem inventore voluptas dignissimos deleniti repudiandae. Aspernatur iure minus illum pariatur earum quos reprehenderit itaque eaque nobis provident distinctio, quis accusamus.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem inventore voluptas dignissimos deleniti repudiandae. Aspernatur iure minus illum pariatur earum quos reprehenderit itaque eaque nobis provident distinctio, quis accusamus.</p>

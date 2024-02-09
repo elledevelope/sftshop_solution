@@ -21,10 +21,16 @@ class ContactController extends AbstractController
         if ($formContact->isSubmitted() && $formContact->isValid()) {
             $contactData = $formContact->getData();
 
+            // flash message
+            $this->addFlash(
+                'notice',
+                'Vontre message est bien envoyé!'
+            );
+
             // https://symfony.com/doc/current/mailer.html :
             $email = (new Email()) //use Symfony\Component\Mime\Email;
-                ->from( $contactData['email'] )
-                ->to('conact@test.com')
+                ->from('conact@test.com')
+                ->to($contactData['email'])
                 ->subject($contactData['sujet'])
                 ->text($contactData['message'])
                 ->html('<p>' . $contactData['message'] . '</p>');
