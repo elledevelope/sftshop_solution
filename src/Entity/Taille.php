@@ -5,9 +5,10 @@ namespace App\Entity;
 use App\Repository\TailleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping as ORM;use ApiPlatform\Metadata\ApiResource;
 
 #[ORM\Entity(repositoryClass: TailleRepository::class)]
+#[ApiResource]
 class Taille
 {
     #[ORM\Id]
