@@ -20,7 +20,7 @@ class ContactType extends AbstractType
                 'label' =>'Sujet de votre message'
             ])
             ->add('email', EmailType::class)
-            ->add('mrssage', TextareaType::class)
+            ->add('message', TextareaType::class)
             ->add('submit', SubmitType::class, [
                 'label' =>'Envoyer votre message'
             ])
