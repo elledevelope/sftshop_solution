@@ -23,8 +23,8 @@ class ContactController extends AbstractController
 
             // https://symfony.com/doc/current/mailer.html :
             $email = (new Email()) //use Symfony\Component\Mime\Email;
-                ->from('conact@test.com')
-                ->to($contactData['email'])
+                ->from($contactData['email'])
+                ->to('conact@test.com')
                 ->subject($contactData['sujet'])
                 ->text($contactData['message'])
                 ->html('<p>' . $contactData['message'] . '</p>');
